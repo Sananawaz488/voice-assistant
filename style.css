@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #182848,
+            #050816 60%
+        );
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+.orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: 0.35;
+}
+
+
+.orb-one {
+
+    width: 350px;
+    height: 350px;
+
+    background: #4f46e5;
+
+    top: -100px;
+    left: -100px;
+}
+
+
+.orb-two {
+
+    width: 300px;
+    height: 300px;
+
+    background: #06b6d4;
+
+    bottom: -100px;
+    right: -80px;
+}
+
+
+.container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+}
+
+
+.assistant-card {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    padding: 40px 30px;
+
+    border-radius: 30px;
+
+    background: rgba(10, 15, 35, 0.78);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(20px);
+
+    text-align: center;
+}
+
+
+.brand h1 {
+
+    margin-top: 15px;
+
+    font-size: 42px;
+
+    letter-spacing: 8px;
+}
+
+
+.brand p {
+
+    margin-top: 8px;
+
+    color: #aab3c5;
+
+    font-size: 14px;
+}
+
+
+.logo {
+
+    width: 90px;
+    height: 90px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #06b6d4
+        );
+
+    box-shadow:
+        0 0 40px rgba(99,102,241,0.55);
+}
+
+
+.logo-ring {
+
+    position: absolute;
+
+    inset: -7px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    animation: rotate 5s linear infinite;
+}
+
+
+.logo-core {
+
+    font-size: 38px;
+
+    font-weight: bold;
+}
+
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.status {
+
+    margin: 25px auto;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.06);
+
+    color: #b9c3d7;
+
+    font-size: 13px;
+}
+
+
+.status-dot {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow: 0 0 10px #22c55e;
+}
+
+
+.conversation {
+
+    text-align: left;
+
+    margin-top: 10px;
+}
+
+
+.message {
+
+    padding: 15px 18px;
+
+    border-radius: 18px;
+
+    margin-bottom: 12px;
+
+    background: rgba(255,255,255,0.05);
+}
+
+
+.message p {
+
+    margin-top: 6px;
+
+    line-height: 1.5;
+
+    color: #e4e8f0;
+}
+
+
+.label {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #8f9bb3;
+}
+
+
+.mic-button {
+
+    width: 90px;
+    height: 90px;
+
+    margin-top: 20px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #06b6d4
+        );
+
+    color: white;
+
+    font-size: 32px;
+
+    box-shadow:
+        0 0 35px rgba(99,102,241,0.45);
+
+    transition: 0.25s;
+}
+
+
+.mic-button:hover {
+
+    transform: scale(1.07);
+
+}
+
+
+.mic-button.recording {
+
+    animation: pulse 1s infinite;
+
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(99,102,241,0.4);
+    }
+
+    50% {
+        transform: scale(1.12);
+        box-shadow: 0 0 50px rgba(6,182,212,0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.hint {
+
+    margin-top: 15px;
+
+    color: #7f8aa3;
+
+    font-size: 12px;
+}
+
+
+.text-input {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+
+.text-input input {
+
+    flex: 1;
+
+    padding: 13px 16px;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: rgba(255,255,255,0.05);
+
+    color: white;
+
+    outline: none;
+}
+
+
+.text-input button {
+
+    width: 48px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #6366f1;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+.footer {
+
+    margin-top: 25px;
+
+    color: #68748d;
+
+    font-size: 11px;
+}
+
+
+.footer strong {
+
+    color: #9ca8c0;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .assistant-card {
+
+        padding: 30px 18px;
+
+        border-radius: 24px;
+    }
+
+    .brand h1 {
+
+        font-size: 34px;
+
+    }
+
+    .mic-button {
+
+        width: 80px;
+        height: 80px;
+
+    }
+
+}

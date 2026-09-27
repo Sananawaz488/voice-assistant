@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NOVA AI</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="background">
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+
+    </div>
+
+
+    <main class="container">
+
+        <section class="assistant-card">
+
+
+            <div class="brand">
+
+                <div class="logo">
+
+                    <div class="logo-ring"></div>
+
+                    <div class="logo-core">
+                        N
+                    </div>
+
+                </div>
+
+                <h1>NOVA</h1>
+
+                <p>Your personal AI voice assistant</p>
+
+            </div>
+
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                <span id="statusText">
+                    Ready to listen
+                </span>
+
+            </div>
+
+
+            <div class="conversation">
+
+                <div class="message user-message">
+
+                    <span class="label">
+                        YOU
+                    </span>
+
+                    <p id="userText">
+                        Say something...
+                    </p>
+
+                </div>
+
+
+                <div class="message nova-message">
+
+                    <span class="label">
+                        NOVA
+                    </span>
+
+                    <p id="novaText">
+                        Hello! I'm NOVA. How can I help you?
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="micButton"
+                class="mic-button"
+            >
+
+                <span class="mic-icon">
+                    🎤
+                </span>
+
+            </button>
+
+
+            <p class="hint">
+                Tap the microphone and start speaking
+            </p>
+
+
+            <div class="text-input">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message..."
+                >
+
+                <button id="sendButton">
+                    ➤
+                </button>
+
+            </div>
+
+
+            <div class="footer">
+
+                <span>Powered by</span>
+
+                <strong>Groq AI</strong>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
